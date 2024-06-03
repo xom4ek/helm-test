@@ -81,8 +81,6 @@ spec:
               subPath: operator.yaml
           env:
             {{- toYaml .Values.node.env | nindent 12 }}
-          envFrom:
-            {{- -}}
       volumes:
           {{- with .Values.volumes }}
           {{- toYaml . | nindent 8 }}
